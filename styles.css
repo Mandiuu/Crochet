@@ -17,15 +17,27 @@ body {
 /* Independent styling for the title */
 .app-title {
     position: absolute;
-    top: 20px;
+    top: 80px;
     left: 50%;
     transform: translateX(-50%); /* Center horizontally */
-    font-size: 50px; /* Adjust as needed */
+    font-size: 50px; /* Default font size for larger screens */
     color: #f5f5f5; /* Chalk-like color */
     font-family: 'Chalkduster', 'Courier New', monospace;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     white-space: nowrap; /* Prevents line break */
 }
+
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+    .app-title {
+        top: 80px; /* Add more space at the top for smaller screens */
+        font-size: 30px; /* Reduce font size for better fit */
+        white-space: normal; /* Allow text to wrap on smaller screens */
+        text-align: center; /* Ensure the text aligns nicely */
+        padding: 0 10px; /* Add side padding to prevent overflow */
+    }
+}
+
 
 /* Main container with a semi-transparent background for a chalkboard look */
 .app-container {
@@ -49,11 +61,29 @@ body {
 }
 
 /* Styling for headings and text within the app container */
+/* Default styles for larger screens */
 h2, p {
     color: #f5f5f5;
     font-family: 'Chalkduster', 'Courier New', monospace;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    margin-top: 20px; /* Adjust default top margin */
 }
+
+/* Styles for mobile screens */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em; /* Scale down the font size */
+        margin-top: 30px; /* Add more space at the top */
+        line-height: 1.2; /* Adjust line height for readability */
+    }
+
+    p {
+        font-size: 1em; /* Scale down font size */
+        margin-top: 20px; /* Maintain proportional spacing */
+        line-height: 1.5; /* Increase line height for readability */
+    }
+}
+
 
 /* Round history and stitch display sections */
 .round-history, .stitch-display {
