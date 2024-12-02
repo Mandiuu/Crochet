@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochet Project Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Title positioned independently from the app container -->
+    <h1 class="app-title">Crochet Project Manager</h1>
+
+    <!-- Project Controls positioned in the upper-right corner of the page -->
+    <div class="project-controls">
+        <select id="projectSelect">
+            <option value="" disabled selected>Select Project</option>
+            <!-- Predefined Project Options from Project 1 to Project 20 -->
+            <option value="Project 1">Project 1</option>
+            <option value="Project 2">Project 2</option>
+            <option value="Project 3">Project 3</option>
+            <option value="Project 4">Project 4</option>
+            <option value="Project 5">Project 5</option>
+            <option value="Project 6">Project 6</option>
+            <option value="Project 7">Project 7</option>
+            <option value="Project 8">Project 8</option>
+            <option value="Project 9">Project 9</option>
+            <option value="Project 10">Project 10</option>
+            <option value="Project 11">Project 11</option>
+            <option value="Project 12">Project 12</option>
+            <option value="Project 13">Project 13</option>
+            <option value="Project 14">Project 14</option>
+            <option value="Project 15">Project 15</option>
+            <option value="Project 16">Project 16</option>
+            <option value="Project 17">Project 17</option>
+            <option value="Project 18">Project 18</option>
+            <option value="Project 19">Project 19</option>
+            <option value="Project 20">Project 20</option>
+        </select>
+        <button id="newProjectButton">New Project</button>
+        <button id="saveProjectButton">Save Project</button>
+        <button id="clearStitchesButton">Clear Stitches</button>
+        <button id="deleteProjectButton">Delete Project</button>
+    </div>
+
+    <div class="app-container">
+        <div class="content">
+            <!-- Display current round and stitch count -->
+            <p>Current Round: <span id="roundCount">1</span></p>
+            <p>Stitches in this round: <span id="stitchCount">0</span></p>
+            
+            <!-- Display for the current stitches in the round -->
+            <div id="stitchDisplay" class="stitch-display"></div>
+
+            <!-- Round history section -->
+            <h2>Round History</h2>
+            <div id="roundHistory" class="round-history"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
